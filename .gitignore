@@ -1,17 +1,15 @@
-# OS generated files
+# System Files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Packaging files (Don't upload your Web Store zips to the raw code!)
+# Build Artifacts
 *.zip
 *.tar.gz
-*.rar
+*.crx
+/build/
+/dist/
 
-# IDE files
+# Editor / IDE settings
 .vscode/
 .idea/
+*.swp

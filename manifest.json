@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "YT Dislike Restorer",
-  "version": "1.0.0",
-  "description": "Seamlessly restores the dislike count on YouTube videos.",
+  "name": "Restore YouTube Dislikes & Ratios",
+  "version": "1.0.1",
+  "description": "Bring back dislike counts on YouTube. Instantly view true video ratings, dislike ratios, and creator metrics directly on the player.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -25,5 +25,8 @@
   "host_permissions": [
     "*://*.youtube.com/*",
     "*://returnyoutubedislikeapi.com/*"
+  ],
+  "permissions": [
+    "storage"
   ]
 }

@@ -1,17 +1,21 @@
-# Privacy Policy for YT Dislike Restorer
+# Privacy Policy
 
-**Last Updated:** July 2026
+**Last Updated:** August 4, 2026
 
-YT Dislike Restorer ("the Extension") respects your privacy. This policy outlines how the Extension handles data.
+**Restore YouTube Dislikes & Ratios** ("the Extension") is committed to protecting your privacy. This policy outlines our data practices to ensure complete transparency.
 
-### Data Collection
-The Extension **does not** collect, store, or transmit any Personally Identifiable Information (PII), browsing history, or analytics to the developer. 
+## 1. Zero Data Collection
+The Extension does **not** collect, store, transmit, or sell any personally identifiable information (PII). We do not track your browsing history, YouTube account details, analytics, or viewing habits. 
 
-### Third-Party APIs
-To function, the Extension reads the video ID of the currently active YouTube tab and sends an anonymous, read-only GET request to the open-source [Return YouTube Dislike API](https://returnyoutubedislike.com/) to retrieve the statistical vote count. No user tokens, account information, or identifiable metadata are sent with this request.
+## 2. Local Storage Only
+The Extension utilizes your browser's local storage API (`chrome.storage.local`) strictly to maintain functional UI preferences and usage counters for rendering logic. This data never leaves your personal device.
 
-### Local Storage
-The Extension utilizes a temporary, local in-memory cache strictly to prevent redundant API calls during your active browsing session. This cache is cleared entirely when the browser tab is closed. 
+## 3. Third-Party APIs
+To fetch community rating data, the Extension sends the current YouTube video ID (a public string of characters) to the public `returnyoutubedislikeapi.com` endpoint. No user data, cookies, or credentials are included in this network request.
 
-### Contact
-If you have any questions regarding this privacy policy or the open-source codebase, please open an issue on the project's GitHub repository.
+## 4. Permissions Justification
+* `activeTab` & `*://*.youtube.com/*`: Required to read the public video ID and inject the restored dislike UI directly into the active YouTube player DOM.
+* `storage`: Required to save local user preferences and extension state.
+
+## 5. Contact
+If you have any questions regarding this privacy policy or the open-source codebase, please open an issue on our GitHub repository or contact the developer via the Chrome Web Store support tab.

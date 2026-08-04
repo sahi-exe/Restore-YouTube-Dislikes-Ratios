@@ -1,28 +1,31 @@
-# YouTube Dislike Restorer 👎
+# Restore YouTube Dislikes & Ratios 📊
 
-A lightweight, pixel-perfect Chrome Extension that restores the dislike counter on YouTube. 
+A lightweight, privacy-first Chrome Extension that restores YouTube dislike counts, precise rating ratios, and creator metrics directly into the native UI.
 
-Unlike basic injection scripts, this extension is engineered to seamlessly integrate with YouTube's modern Single Page Application (SPA) architecture and dynamic segmented-button Flexbox layouts.
+## 🚀 Features
 
-## ✨ Technical Features
+* **Pixel-Perfect Native UI:** Clones YouTube's exact DOM structure and SVG padding for a seamless, undetectable integration of the dislike count.
+* **Smart Ratio Tooltips:** Hover over the Like or Dislike buttons to instantly reveal the video's true community rating percentage and raw like/dislike counts.
+* **Manifest V3 Compliant:** Built using the latest Chrome extension architecture for maximum performance, security, and minimal memory footprint.
+* **Zero-Tracking Privacy:** No analytics, no telemetry, and no background scripts draining CPU. 
 
-* **SPA "Ghost DOM" Bypass:** YouTube's navigation engine (`yt-navigate-finish`) recycles DOM elements and hides previous videos rather than destroying them. This extension intelligently scopes its queries to the `ytd-watch-metadata` active container, ensuring the UI only updates for the currently visible video without requiring page refreshes.
-* **Pixel-Perfect Native Cloning:** Instead of fighting YouTube's stylesheet with clunky inline CSS, this script clones the native `cbox` text nodes from the active "Like" button. This forces the Dislike button to perfectly inherit YouTube's proprietary typography, 6px icon margins, and padding.
-* **API Rate-Limit Protection:** Implements a robust `Set()` and memory-cache system to prevent redundant asynchronous calls to the Return YouTube Dislike API, safeguarding against IP bans during heavy navigation.
-* **Native Number Formatting:** Accurately mimics YouTube's proprietary rounding logic (e.g., dynamically rounding `18,900` to `19K` and stripping trailing decimals) for seamless UI integration.
+## 🛠️ Architecture & Technologies
 
-## 🚀 Installation (Developer Mode)
+* **Vanilla JavaScript:** Zero heavy dependencies, hacky CSS overrides, or framework bloat for lightning-fast execution.
+* **DOM Mutation & State Engine:** Efficient polling, caching mechanisms, and event listeners (`yt-navigate-finish`, `popstate`) designed specifically to handle YouTube's Single Page Application (SPA) navigations without breaking layouts.
+* **Data Integration:** Hooks into the community-driven `returnyoutubedislikeapi.com` endpoint for accurate historical and extrapolated video metrics.
 
-1. Clone this repository: `git clone https://github.com/yourusername/YT-Dislike-Restorer.git`
+## 📦 Installation
+
+### From the Chrome Web Store
+*(Link Coming Soon)*
+
+### Manual Developer Installation
+1. Clone this repository or download the source code.
 2. Open Google Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** in the top right corner.
-4. Click **Load unpacked** and select the directory containing the cloned repository.
-5. Open YouTube—no refreshes required!
+3. Enable **"Developer mode"** in the top right corner.
+4. Click **"Load unpacked"** and select the extension directory.
+5. Open any YouTube video to see the real-time metrics in action!
 
-## 🛠️ Tech Stack
-* **JavaScript (ES6+)**: Asynchronous API fetching, DOM manipulation, and mutation observation.
-* **Return YouTube Dislike API**: Backend data interpolation.
-* **Manifest V3**: Compliant with the latest Chrome Web Store security protocols.
-
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
